@@ -16,26 +16,27 @@ def update_puzzle(puzzle,selected_move):
     p1=0
     zero_pos=puzzle.index(0)
     if selected_move=='d':
-        if zero_pos+1 <8 and zero_pos+1>0:
+        if zero_pos+1 <=8 and zero_pos+1>=0:
          p1=puzzle[zero_pos+1]
          puzzle[zero_pos+1]=0
          puzzle[zero_pos]=p1
     elif selected_move=='a':
-        if zero_pos-1 <8 and zero_pos-1>0:
+        if zero_pos-1 <=8 and zero_pos-1>=0:
            p1=puzzle[zero_pos-1]
            puzzle[zero_pos-1]=0
            puzzle[zero_pos]=p1
     elif selected_move=='s':
-        if zero_pos+3 <8 and zero_pos+3>0:
+        if zero_pos+3 <=8 and zero_pos+3>=0:
            p1=puzzle[zero_pos+3]
            puzzle[zero_pos+3]=0
            puzzle[zero_pos]=p1
     elif selected_move=='w':
-        if zero_pos-3 <8 and zero_pos-3>0:
+        if zero_pos-3 <=8 and zero_pos-3>=0:
            p1=puzzle[zero_pos-3]
            puzzle[zero_pos-3]=0
            puzzle[zero_pos]=p1
     return puzzle
+
 
 
 def win (puzzle):
