@@ -25,26 +25,6 @@ def print_puzzle(puzzle):
 		'| ' + p[6] + ' | ' + p[7] + ' | ' + p[8] + ' |' + '\n' +
 		'-'*13
 		)
-def Moves (puzzle):
-	position= puzzle.index(0)
-	moves={'0':['d''s'],
-	'1':['d','s','a'],
-	'2':['a','s'],
-	'3':['d','s','w'],
-	'4':['d','s','a','w'],
-	'5':['w','s','a'],
-	'6':['d','w'],
-	'7':['d','w','a'],
-	'8':['w','a']}
-	available_moves=moves[str(position)]
-	return available_moves
-	
-								
-
-def function2(puzzle,slected_move):
-    kdmnffgjfgf
-def function3(puzzle):
-    kbdfkbfsdbhl    
 
 
 def human_play(puzzle):
