@@ -30,13 +30,13 @@ def print_puzzle(puzzle):
 def human_play(puzzle):
 	while (True):
 		print_puzzle(puzzle)
-		available_moves=function1(puzzle) # returns the possible actions in the current state of the puzzle
+		available_moves=av_moves(puzzle) # returns the possible actions in the current state of the puzzle
 		print('available moves: ',available_moves)
 		selected_move=input('select a move: ')
 		if selected_move not in available_moves:
 			print('Game Over'); break
-		puzzle=function2(puzzle,selected_move) # apply the action to the current state and returns the new state of the puzzle
-		if function3(puzzle): # returns True only if the state of the puzzle satisfy the goal condition
+		puzzle=update_puzzle(puzzle,selected_move) # apply the action to the current state and returns the new state of the puzzle
+		if win(puzzle): # returns True only if the state of the puzzle satisfy the goal condition
 			print_puzzle(puzzle); print("You win"); break
 
 if __name__ == '__main__':
